@@ -9,6 +9,8 @@ from discord.ext import commands, tasks
 import requests
 from bs4 import BeautifulSoup
 import asyncio
+import os
+from dotenv import load_dotenv
 
 
 # Bot Configuration
@@ -823,4 +825,5 @@ async def on_ready():
     print(f"Logged in as {bot.user}")
 
 
-bot.run("MTMzMjk1MDY3NjM2Nzc0MDk0OQ.G6FN8U.aT7K4sCXwbz3FsmV0oRVgRWC3WE_bG4DqkHtkA")
+load_dotenv()
+TOKEN = os.getenv("DISCORD_BOT_TOKEN")
