@@ -827,3 +827,7 @@ async def on_ready():
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+if TOKEN is None:
+    print("Error: No bot token found!")
+else:
+    print("Bot token loaded successfully!")
